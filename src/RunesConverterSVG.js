@@ -34,7 +34,7 @@ function RunesConverterSVG({ number }, ref) {
         viewBox="-30 -45 60 90"
         xmlns="http://www.w3.org/2000/svg"
         style={{ margin: '10px 0' }}
-        id="cistercian-svg"
+        id="rune-svg"
     >
       <style>{svgStyles}</style>
       <defs>
@@ -86,12 +86,12 @@ function RunesConverterSVG({ number }, ref) {
          <path id="thousand-9" d="M 0 30 L -15 30 L -15 15 L 0 15 L 0 30 Z" className="symbol" strokeLinejoin="miter"/>
       </defs>
 
-      <use href="#stem-base"/>
+      <use href="#stem-base" data-testid='stem-base'/>
 
-      {unitId && <use href={unitId} />}
-      {tenId && <use href={tenId} />}
-      {hundredId && <use href={hundredId} />}
-      {thousandId && <use href={thousandId} />}
+      {unitId && <use href={unitId} data-testid={`unit-${units}`} />}
+      {tenId && <use href={tenId} data-testid={`ten-${tens}`} />}
+      {hundredId && <use href={hundredId} data-testid={`hundred-${hundreds}`} />}
+      {thousandId && <use href={thousandId} data-testid={`thousand-${thousands}`} />}
 
     </svg>
   );

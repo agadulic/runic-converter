@@ -85,7 +85,7 @@ function App() {
         const jpgDataUrl = canvas.toDataURL('image/jpeg', 0.95);
         const link = document.createElement('a');
         link.href = jpgDataUrl;
-        link.download = `cistercian_${number}.jpg`;
+        link.download = `rune_${number}.jpg`;
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
