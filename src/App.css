@@ -20,6 +20,7 @@
   border: 1px solid #ccc;
   border-radius: 4px;
   margin-bottom: 10px;
+  min-width: 90px;
 }
 
 .error {
